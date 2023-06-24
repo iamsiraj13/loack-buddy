@@ -11,8 +11,8 @@ import circle2 from "../assets/images/circle2.png";
 
 const PageOne = () => {
   return (
-    <div className="bg-[#F6EBDE] min-h-screen">
-      <div className="h-full  py-[12]  xxl:min-h-screen w-full  bg-[#F6EBDE] flex items-center relative overflow-hidden ">
+    <div className="bg-[#F6EBDE] min-h-[calc(100vh-120px)]  overflow-hidden">
+      <div className="min-h-[calc(100vh-120px)] w-full  bg-[#F6EBDE] flex items-center relative overflow-hidden ">
         <div className="circle-wrapper">
           <img
             src={circle}
@@ -42,7 +42,7 @@ const PageOne = () => {
                   <input
                     id="number"
                     type="number"
-                    className="bg-[#F7CDB1] px-4 py-3 rounded-full"
+                    className="bg-[#F7CDB1] px-4 py-3 rounded-full text-[#F7774E]"
                   />
                 </div>
                 <div className="flex justify-center">
@@ -62,7 +62,7 @@ const PageOne = () => {
                   alt=""
                 />
                 <img
-                  className="absolute top-[70px] lg:top-[120px] lg:-left-10 w-[30%] lg:w-auto img z-[999999999]"
+                  className="absolute top-[70px] lg:top-[120px] lg:-left-10 w-[30%] lg:w-auto img "
                   src={img}
                   alt=""
                 />
