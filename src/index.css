@@ -15,6 +15,7 @@
  body {
      font-family: 'Poppins', sans-serif;
      position: relative;
+     transition: all 1s;
  }
 
  .buddy {
@@ -23,22 +24,336 @@
      -webkit-text-stroke-color: #FE9E6B;
  }
 
- .react-code-input input[type=number] {
-     -webkit-appearance: none !important;
-     -moz-appearance: none !important;
-     appearance: none !important;
-     scroll-behavior: none;
 
- }
-
- /* input[type=number]:hover {
-     -webkit-appearance: none !important;
-     -moz-appearance: none !important;
-     appearance: none !important;
- } */
 
  input::-webkit-outer-spin-button,
  input::-webkit-inner-spin-button {
      -webkit-appearance: none;
      margin: 0;
+ }
+
+ .container {
+     width: 270px;
+ }
+
+ .character {
+     border: none;
+     font-size: 19px;
+     border-radius: 3px;
+     font-family: 'Poppins', sans-serif;
+     /* dark theme */
+     color: #F77349;
+     background-color: #F8CEB2;
+
+ }
+
+ .character--selected {
+     position: relative;
+ }
+
+ .character--selected:empty::after {
+     content: "";
+     width: 1px;
+     height: 30px;
+     background-color: #333;
+     display: block;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     animation: blink 1s infinite step-end;
+ }
+
+ @keyframes blink {
+     0% {
+         opacity: 1;
+     }
+
+     50% {
+         opacity: 0;
+     }
+ }
+
+ .vi__character--selected {
+     outline: 2px solid #F77349;
+     color: #F77349;
+ }
+
+
+ /* image lock animation */
+ .lock {
+     animation: lock 5s infinite;
+     animation-direction: alternate;
+     animation-delay: 5s;
+     z-index: 999999;
+     opacity: 0;
+ }
+
+ @keyframes lock {
+
+     0% {
+         transform: scale(0.9, 0.9) translate(20px, 20px);
+         opacity: 1;
+     }
+
+     50% {
+         transform: scale(0.9, 0.9) translate(-10px, -10px);
+         opacity: 1;
+
+     }
+
+     100% {
+         transform: scale(0.9, 0.9) translate(20px, 20px);
+         opacity: 1;
+     }
+ }
+
+ /* password   animation */
+ .password {
+     animation: password 5s infinite;
+     animation-direction: alternate;
+     animation-delay: 5s;
+     opacity: 0;
+ }
+
+ @keyframes password {
+
+     0% {
+         transform: scale(0.7) translateY(20px);
+         opacity: 1;
+     }
+
+     50% {
+         transform: scale(0.7) translateY(-10px);
+         opacity: 1;
+     }
+
+     100% {
+         transform: scale(0.7) translateY(20px);
+         opacity: 1;
+     }
+ }
+
+ /* key   animation */
+ .key {
+     animation: key 5s infinite;
+     animation-direction: alternate;
+     animation-delay: 5s;
+     opacity: 0;
+ }
+
+ @keyframes key {
+
+     0% {
+         transform: scale(0.7);
+         opacity: 1;
+     }
+
+     50% {
+         transform: scale(1);
+         opacity: 1;
+     }
+
+     100% {
+         transform: scale(0.7);
+         opacity: 1;
+     }
+ }
+
+ /* key   animation */
+ .img {
+     animation: img 6s infinite;
+     animation-direction: alternate;
+     animation-delay: 5s;
+     opacity: 0;
+ }
+
+ @keyframes img {
+
+     0% {
+         transform: translate(-10px, -15px);
+         opacity: 1;
+     }
+
+     50% {
+         transform: translate(20px, 15px);
+         opacity: 1;
+     }
+
+     100% {
+         transform: translate(-10px, -15px);
+         opacity: 1;
+
+     }
+ }
+
+ /* key   animation */
+ .home {
+     animation: home 5s infinite;
+     animation-direction: alternate;
+     opacity: 0;
+     animation-delay: 5s;
+ }
+
+ @keyframes home {
+
+     0% {
+         transform: scale(0.7) translate(10px, 15px);
+         opacity: 1;
+     }
+
+     50% {
+         transform: scale(0.8) translate(-15px, -20px);
+         opacity: 1;
+     }
+
+     100% {
+         transform: scale(0.7) translate(10px, 15px);
+         opacity: 1;
+     }
+ }
+
+ /* key   animation */
+ .user {
+     animation: user 5s infinite;
+     animation-direction: alternate;
+     animation-delay: 5s;
+     opacity: 0;
+ }
+
+ @keyframes user {
+
+     0% {
+         transform: scale(0.7) translate(10px, 15px);
+         opacity: 1;
+     }
+
+     45% {
+         transform: scale(0.8) translate(-15px, 20px);
+         opacity: 1;
+     }
+
+     70% {
+         transform: scale(0.8) translate(-25px, 25px);
+         opacity: 1;
+     }
+
+     100% {
+         transform: scale(0.7) translate(10px, 15px);
+         opacity: 1;
+     }
+ }
+
+ /* cicle   animation */
+ .circle {
+     animation: circle 5s infinite;
+     animation-direction: alternate;
+     animation-delay: 5s;
+     transition: all 1s;
+ }
+
+ @keyframes circle {
+
+     0% {
+         transform: translateX(-20px);
+         opacity: 1;
+
+     }
+
+     50% {
+         transform: translateX(25px);
+         opacity: 1;
+     }
+
+     100% {
+         transform: translateX(-25);
+         opacity: 1;
+     }
+ }
+
+ /* cicle2   animation */
+ .circle2 {
+     animation: circle2 5s infinite;
+     animation-direction: alternate;
+ }
+
+ @keyframes circle2 {
+
+     0% {
+         transform: translateY(-20px);
+     }
+
+     50% {
+         transform: translateY(25px);
+     }
+
+     100% {
+         transform: translateY(-25);
+     }
+ }
+
+
+ .logo {
+     animation-delay: .25s;
+ }
+
+ .lock-text {
+     animation-delay: .50s;
+
+ }
+
+ .buddy {
+     animation-delay: .75s;
+
+ }
+
+ .one {
+     animation-delay: 1s;
+
+ }
+
+ .two {
+     animation-delay: 1.2s;
+
+ }
+
+ .three {
+     animation-delay: 1.5s;
+
+ }
+
+ /* search   animation */
+ .search {
+     animation: search 2s;
+     animation-direction: alternate;
+     animation-delay: 2s;
+     animation-fill-mode: forwards;
+     opacity: 0;
+ }
+
+ @keyframes search {
+
+     0% {
+         transform: scaleX(0);
+         opacity: 0;
+
+     }
+
+     100% {
+         transform: scaleX(1);
+         opacity: 1;
+     }
+ }
+
+
+ .nav__user {
+     animation-delay: 2.5s;
+ }
+
+ .form-phone {
+     animation-delay: 4.5s;
+ }
+
+ .phone-img {
+     animation-delay: 4s;
  }
